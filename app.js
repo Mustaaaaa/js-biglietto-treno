@@ -13,30 +13,28 @@ const km = parseFloat(prompt('Numero di km')); //Number
 console.log('Numero di km: ' + km);
 
 /* prezzi al km per le varie fasce di età*/
-var prezzokm = 0.21; //Number
-var prezzokmunder = ((0.21 * 80) / 100); //Number
-var prezzokmover = ((0.21 * 60) / 100); //Number
+let prezzokm = 0.21; //Number
 
 /* se il cliente ha un età maggiore uguale a 65 anni allora applica il seguente sconto*/
 if (eta >= 65) {
-    var prezzototover = (prezzokmover * km); //Number
+    var prezzototover = (((prezzokm * 60) / 100) * km); //Number
 
     console.log('Il prezzo è di ' + prezzototover.toFixed(2));
-    console.log('Il prezzo è di ' + prezzokmover.toFixed(2) + ' al km per gli over 65');
+    console.log('Il prezzo è di 0.12 al km per gli over 65');
 }
 /* se il cliente ha un età minore di 18 anni allora applica il seguente sconto */
 else if (eta < 18) {
-    var prezzototunder = (prezzokmunder * km); //Number
+    var prezzototunder = (((prezzokm * 80) / 100) * km); //Number
     
     console.log('Il prezzo è di ' + prezzototunder.toFixed(2));
-    console.log('Il prezzo è di ' + prezzokmunder.toFixed(2) + ' al km per gli under 18');
+    console.log('Il prezzo è di 0.16 al km per gli under 18');
 }
 /* altrimenti non applicare nessuno sconto*/
 else {
     var prezzokmnormale = (prezzokm * km); //Number
     
     console.log('Il prezzo è di ' + prezzokmnormale.toFixed(2));
-    console.log('Il prezzo è di ' + prezzokm.toFixed(2) + ' al km per gli over 18 e gli under 65');
+    console.log('Il prezzo è di 0.21 al km per gli over 18 e gli under 65');
 }
 
 
