@@ -12,7 +12,7 @@ console.log('Età del passeggero: ' + eta);
 const km = parseFloat(prompt('Numero di km')); //Number
 console.log('Numero di km: ' + km);
 
-/* prezzi al km per le varie fasce di età*/
+/* prezzo al km*/
 let prezzokm = 0.21; //Number
 
 /* se il cliente ha un età maggiore uguale a 65 anni allora applica il seguente sconto*/
